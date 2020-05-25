@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Mac files
+.idea/
+
+# Tailored ignored files
+#data/*
