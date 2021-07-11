@@ -1,6 +1,12 @@
 """
 @author StellaVerkijk
-prints scores on the similarity test
+prints scores on the similarity test (overall score over complete similarity data set as well as score per triple type)
+run from commandline providing two arguments
+-modeltype ('bertje' or 'robbert' or 'mbert')
+-path to the dataset for the similarity test ('data/complete_simtest.csv' or 'data/complete_simtest_no_keywords_roberta.csv' or 'data/complete_simtest_no_keywords_bert.csv')
+As the medical language models are not published yet due to privacy contraints, these models are not yet included in this code.
+Example run for testing RobBERT:
+python get_similarity_test_scores.py robbert 'data/complete_simtest.csv'
 """
 
 from simpletransformers.language_representation import RepresentationModel
@@ -75,15 +81,15 @@ def choose_model(modeltype):
     return(model, tokenizer)
 
 
-def get_score(modeltype):
+def get_score(modeltype, path_to_simtest):
     """
     Returns the score of the chosen model on the complete similarity test
     :param modeltype: str ('robbert', 'bertje' 'mbert')
+    :param path_to_simtest: str
     """
     
-    model, tokenizer = choose_model(modeltype)
-    #set path to test set --> change to 'complete_simtest_no_keywords_roberta.csv' or 'complete_simtest_no_keywords_bert.csv' to test on data set without keywords
-    path_to_simtest = '../create_dataset/complete_simtest.csv'
+    model, tokenizer = choose_model(modeltype, path_to_simtest)
+    #set path to test set --> 'data/complete_simtest.csv' or 'data/complete_simtest_no_keywords_roberta.csv' or 'data/complete_simtest_no_keywords_bert.csv'
     df_test = pd.read_csv(path_to_simtest, sep = ';')
 
     predictions = []
@@ -102,16 +108,16 @@ def get_score(modeltype):
     return(result)
     
 
-def get_score_per_triple_type(modeltype, triple_type):
+def get_score_per_triple_type(modeltype, path_to_simtest, triple_type):
     """
     Returns the score of the chosen model on the complete similarity test
     :param modeltype: str ('robbert', 'bertje' 'mbert')
+    :param path_to_simtest: str
     :param triple_type: int (1, 2, 3, 4)
     """
     
     model, tokenizer = choose_model(modeltype)
-    #set path to test set --> change to 'complete_simtest_no_keywords_roberta.csv' or 'complete_simtest_no_keywords_bert.csv' to test on data set without keywords
-    path_to_simtest = '../create_dataset/complete_simtest.csv'
+    #set path to test set --> 'data/complete_simtest.csv' or 'data/complete_simtest_no_keywords_roberta.csv' or 'data/complete_simtest_no_keywords_bert.csv'
     df_test = pd.read_csv(path_to_simtest, sep = ';')
     
     predictions = []
@@ -130,14 +136,18 @@ def get_score_per_triple_type(modeltype, triple_type):
     result = accuracy_score(annotations, predictions)
     return(result)
             
-
-result_complete = get_score('robbert')
-print("Accuracy score on complete test set: ", result_complete)
-result_t1 = get_score_per_triple_type('robbert', 1)
-print("Accuracy score triple type 1: ", result_t1)
-result_t2 = get_score_per_triple_type('robbert', 2)
-print("Accuracy score triple type 2: ", result_t2)
-result_t3 = get_score_per_triple_type('robbert', 3)
-print("Accuracy score triple type 3: ", result_t3)
-result_t4 = get_score_per_triple_type('robbert', 4)
-print("Accuracy score triple type 4: ", result_t4)
+def main(modeltype, path_to_simtestdata):
+	result_complete = get_score(modeltype, path_to_simtestdata)
+	print("Accuracy score on complete test set: ", result_complete)
+	result_t1 = get_score_per_triple_type(modeltype, path_to_simtestdata, 1)
+	print("Accuracy score triple type 1: ", result_t1)
+	result_t2 = get_score_per_triple_type(modeltype, path_to_simtestdata, 2)
+	print("Accuracy score triple type 2: ", result_t2)
+	result_t3 = get_score_per_triple_type(modeltype, path_to_simtestdata, 3)
+	print("Accuracy score triple type 3: ", result_t3)
+	result_t4 = get_score_per_triple_type(modeltype, path_to_simtestdata, 4)
+	print("Accuracy score triple type 4: ", result_t4)
+	
+modeltype = sys.argv[1]
+path_to_simtest_data = sys.argv[2]
+main(modeltype, path_to_simtestdata)
