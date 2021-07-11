@@ -1,11 +1,11 @@
-#Evaluating on ICF classification as a medical downstream task (in-domain extrinsic evaluation)
+# Evaluating on ICF classification as a medical downstream task (in-domain extrinsic evaluation)
 This code serves to fine-tune and test models on classifying sentences and documents as being about one of four domains fromt the World Health Organisation's International Classification of Functioning, Disability and Health (WHO ICF).
 
-##Data
+## Data
 The data for these tests can not be provided due to privacy issues.
 Therefore, the example given underneath on how to run the main script contains example paths to the data.
 
-##Scripts
+## Scripts
 The main script is finetune_on_ICF_with_stf.py
 All other scripts support this script. 
 
