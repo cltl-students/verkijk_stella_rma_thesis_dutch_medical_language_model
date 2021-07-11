@@ -1,5 +1,5 @@
 """
-@Author StellaVerkijk
+@author StellaVerkijk
 This script creates a dataset of 8000 sentences that can be used for an anonymization test using the fill-mask task of transformer language models.
 For the anonymization test of the From Scratch Language model, a subset of the data set created with this script was used.
 This script contains one function that loads a text file, splits on sentences, select sentences that contain the token 'PERSON' and that are between 30 and 120 characters long, replaces the PERSON tokens in these sentences with the <mask> token and writes a sample of 8000 of these sentences to a csv file.
