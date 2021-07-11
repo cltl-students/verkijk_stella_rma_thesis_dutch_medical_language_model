@@ -1,61 +1,20 @@
 # Creating a Dutch Medical Language Model: a thesis project
 This repository contains the code for the creation and evaluation of two domain-specific Dutch Medical Language models.
-Most data used in this project can not be provided due to privacy constraints.
+Most data used in this project can not be provided due to privacy constraints. Where possible, data is provided.
 
 # Overview
+The src folder contains all code and data. Per subfolder, a readme will be provided.
+The subfolders it contains are the following:
 
-
-
-
-# sample-thesis-project
-This repository is an example for the structure and content that a CLTL thesis project may have. 
-
-# Overview
-This repository assumes a Python project, with an Open License (MIT style). If any of these aspects are different from your project please make sure to change those accordingly.
-Please feel free to clone/fork this repository and use it as a template for your thesis.
-
-# Project structure
-
-```
-thesis-project
-└───data
-│       │   sample_data.csv 
-└───results
-│       │   sample_results.png 
 └───src
-│   └───utils
-│       │   plotting.py
-│   │   main.py
-│   .gitignore
-│   LICENSE
-│   README.md
-│   requirements.tx
-```
+│   └───gather_traindata (provides the code used for gathering, filtering and preparing the data used for pre-training in train_lm)
+│   └───train_lm (provides the code to pre-train two medical language models: from scratch and extending RobBERT
+│   └───ICF_test (provides the code to fine-tune and test language models on a medical classification task)
+│   └───similarity_test (provides the code to create a similarity test set from hospital notes and provides the code and data to test language models on this)
+│   └───NER_test (provides the code to fine-tune and test language models on named entitiy recognition for general Dutch)
+│   └───anonymization (provides the code to anonymize the vocabulary of a language model and test the level of anonymicity of a language model)
 
-# To Do
-Once you start, please go through the following steps to tailor this template to your project
 
 ## Thesis report
-You may decide to upload your report here directly, or to simply add a reference to where the report is hosted (e.g. Overleaf)
-- [ ] Add a reference to the thesis report
-
-## Data 
-To ensure reproducibility, Yu need to provide the data your project uses.
-- [ ] Add your data in the data folder
-
-Sometimes, sharing sharing data is not straightforward. For example, there may be restrictions regarding with whom or how you can share the data you have. Some other times, the data you are using is open and easily accessible from other sites, in which case you might want to point directly to the original source. Either way, if this is the case for you please 
-- [ ] Add the data folder to ``.gitignore`` in order to avoid commiting these files to Github. For this you can simply uncomment the last line in the ``.gitignore`` file  
-```
-# Tailored ignored files
-data/*
-```
-- [ ] Make sure to add a ``README.md`` file inside the data folder, where you explain in detail how to obtain and structure the data
-
-## README
-- [ ] Add instructions on how to set up the project, how to run your code and what to expect as an output.
-
-
-
-
-
+The thesis report can be accessed here:
 
