@@ -1,4 +1,4 @@
-# Creating a Dutch Medical Language Model: a thesis project
+# Creating Dutch Medical Language Models: a thesis project
 This repository contains the code for the creation and evaluation of two domain-specific Dutch Medical Language models.
 Most data used in this project can not be provided due to privacy constraints. Where possible, data is provided.
 
