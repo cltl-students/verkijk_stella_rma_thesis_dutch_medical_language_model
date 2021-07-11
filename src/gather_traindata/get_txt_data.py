@@ -1,6 +1,6 @@
 """
-@Author StellaVerkijk
-Gather pre-training data for the creation of the domain-specific medical language models.
+@author StellaVerkijk
+This script gathers pre-training data for the creation of the domain-specific medical language models.
 It loads csv's, adapts the row that contains the note by anonymizing it and dividing it in chunks and then exports it to a .txt file.
 This script contains a function for each hospital & year.
 """
@@ -45,8 +45,6 @@ def process_AMC_2018():
                     sentences = []
                     for sentence in spacy_anon.sents:
                         sentences.append(sentence)
-                    #chunks = np.array_split(sentences, 6)
-                    #chunks = [sentences[i:i + 60] for i in range(0, len(sentences), 6)]
                     n = 40
                     chunks = [sentences[i * n:(i + 1) * n] for i in range((len(sentences) + n -1) // n)]
                     lens_per_doc = []
