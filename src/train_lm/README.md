@@ -11,3 +11,5 @@ Anyone can change the values of the dictionary in the json file and run the scri
 When running the scripts extend_robbert.py, one argument must be included in the command line: freeze_layers to only train the embedding-lookup layer (phase I) or not_freeze_layers (phase II and III)
 
 The file adapted_robbert_class.py contains a custom made dataloader that is used for the training of the models. This is a LineByLineDataset class supported by PyTorch based on the dataloader of RobBERT.
+
+The folder monitor_process contains scripts to convert tensorboard logs to dataframes (log_to_df.py) and plot the learning rate and loss against pre-training time (plot_from_df.py) to monitor the pre-training process. The code in log_to_df.py is by @theRealSuperMario (https://github.com/theRealSuperMario)
