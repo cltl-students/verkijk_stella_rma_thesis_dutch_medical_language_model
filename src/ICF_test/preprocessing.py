@@ -1,5 +1,5 @@
 """
-@Author StellaVerkijk
+@author StellaVerkijk
 """
 
 import pickle
@@ -188,9 +188,6 @@ def prepareDataNC(function):
 df_tr_nc, df_te_nc, ids_nc  = prepareDataNC(completeDataframe)
 df_tr_c, df_te_c = prepareDataC(completeDataframe)
 
-#df_tr_nc.to_csv("df_tr_nc_with_levels.csv", sep = ';')
-#df_te_nc.to_csv("df_te_nc_with_levels.csv", sep = ';')
-#df_tr_c.to_csv("df_tr_c_with_levels.csv", sep = ';')
-#df_te_c.to_csv("df_te_c_with_levels.csv", sep = ';')
+
 
 
