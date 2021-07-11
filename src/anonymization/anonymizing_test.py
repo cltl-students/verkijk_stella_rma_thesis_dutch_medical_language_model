@@ -1,5 +1,5 @@
 """
-@Author StellaVerkijk
+@author StellaVerkijk
 This script gathers predictions of the From Scratch Language Model for a data set of sentences where names are masked.
 Filepaths are hardcoded since the data used could not be released to the public because of privacy issues
 """
