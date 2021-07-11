@@ -5,7 +5,7 @@ Most data used in this project can not be provided due to privacy constraints. W
 # Overview
 The src folder contains all code and data. Per subfolder, a readme will be provided.
 The subfolders it contains are the following:
-
+```
 └───src
 │   └───gather_traindata (provides the code used for gathering, filtering and preparing the data used for pre-training in train_lm)
 │   └───train_lm (provides the code to pre-train two medical language models: from scratch and extending RobBERT
@@ -13,20 +13,7 @@ The subfolders it contains are the following:
 │   └───similarity_test (provides the code to create a similarity test set from hospital notes and provides the code and data to test language models on this)
 │   └───NER_test (provides the code to fine-tune and test language models on named entitiy recognition for general Dutch)
 │   └───anonymization (provides the code to anonymize the vocabulary of a language model and test the level of anonymicity of a language model)
-
-thesis-project
-└───data
-│       │   sample_data.csv 
-└───results
-│       │   sample_results.png 
-└───src
-│   └───utils
-│       │   plotting.py
-│   │   main.py
-│   .gitignore
-│   LICENSE
-│   README.md
-│   requirements.tx
+```
 
 
 ## Thesis report
