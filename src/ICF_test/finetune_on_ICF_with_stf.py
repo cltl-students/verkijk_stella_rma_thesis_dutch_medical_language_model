@@ -1,6 +1,6 @@
 """
 finetune medical language model with simpletransformers
-Author @ Stella Verkijk
+@author StellaVerkijk
 
 This scripts finetunes a model on the ICF data and 
 -saves the finetuned model
