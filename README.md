@@ -14,6 +14,20 @@ The subfolders it contains are the following:
 │   └───NER_test (provides the code to fine-tune and test language models on named entitiy recognition for general Dutch)
 │   └───anonymization (provides the code to anonymize the vocabulary of a language model and test the level of anonymicity of a language model)
 
+thesis-project
+└───data
+│       │   sample_data.csv 
+└───results
+│       │   sample_results.png 
+└───src
+│   └───utils
+│       │   plotting.py
+│   │   main.py
+│   .gitignore
+│   LICENSE
+│   README.md
+│   requirements.tx
+
 
 ## Thesis report
 The thesis report can be accessed here:
