@@ -1,8 +1,7 @@
 """
 Tests a transformer language model on the CoNLL-2002 NERC task for Dutch
 4 arguments should be passed when running from commandline: modeltype, path_to_model, traindata, evaldata
-Example of how to run to test BERTje
-
+Example of how to run to test BERTje:
 python run_NER.py 'bert', 'GroNLP/bert-base-dutch-cased', 'data/ned_train_text.txt', 'data/ned_testb_text.txt'
 """
 
