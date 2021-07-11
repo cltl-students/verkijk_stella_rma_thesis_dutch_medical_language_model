@@ -1,7 +1,8 @@
 """
-@Author StellaVerkijk
-this code filters out non-covid test data a-proof from an original csv containing all data from 2017. The a-proof project only used non-covid data from 2017. 
-In order to aviod any circularity, the testdata for the ICF task was filtered ou of the pre-training data here.
+@author StellaVerkijk
+this code filters out the non-covid data that was used as test data in the a-proof project (and is thus also test data for the ICF classification task for this project) from an original csv containing all data from 2017. The a-proof project only used non-covid data from 2017. 
+The testdata for the ICF task was filtered out of the pre-training data with this script in order to aviod any circularity.
+Since the original data could not be provided due to privacy constraints, filepaths are hardcoded.
 """
 
 import pickle
