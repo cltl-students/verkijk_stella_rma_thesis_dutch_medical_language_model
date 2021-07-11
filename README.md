@@ -1,3 +1,12 @@
+# Creating a Dutch Medical Language Model: a thesis project
+This repository contains the code for the creation and evaluation of two domain-specific Dutch Medical Language models.
+Most data used in this project can not be provided due to privacy constraints.
+
+# Overview
+
+
+
+
 # sample-thesis-project
 This repository is an example for the structure and content that a CLTL thesis project may have. 
 
