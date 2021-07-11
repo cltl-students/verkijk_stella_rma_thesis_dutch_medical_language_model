@@ -10,4 +10,4 @@ In the thesis report, different phases of training are presented. The training_a
 Anyone can change the values of the dictionary in the json file and run the script for a different phase or for a new experiment.
 When running the scripts extend_robbert.py, one argument must be included in the command line: freeze_layers to only train the embedding-lookup layer (phase I) or not_freeze_layers (phase II and III)
 
-The file adapted_robbert_class.py contains a custom made dataloader that is used for the training of the models. This is a LineByLineDataset class supported by 
+The file adapted_robbert_class.py contains a custom made dataloader that is used for the training of the models. This is a LineByLineDataset class supported by PyTorch based on the dataloader of RobBERT.
