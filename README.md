@@ -3,7 +3,7 @@ This repository contains the code for the creation and evaluation of two domain-
 Most data used in this project can not be provided due to privacy constraints. Where possible, data is provided.
 
 # Overview
-The src folder contains all code and data. Per subfolder, a readme will be provided.
+The src folder contains all code and data. Per subfolder, a readme is provided. 
 The subfolders it contains are the following:
 ```
 └───src
