@@ -1,7 +1,7 @@
 """
-@Author Quirine Smit 
-@Author StellaVerkijk
-this code filters out covid data an original csv containing data from 2020. 
+@author Quirine Smit 
+@author StellaVerkijk
+this code filters out covid data from original csv's containing data from 2020. 
 Run twice and change filenames to collect filtered data for VuMC as well as AMC.
 """
 
