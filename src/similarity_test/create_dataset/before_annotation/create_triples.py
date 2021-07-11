@@ -1,5 +1,5 @@
 """
-@Author StellaVerkijk
+@author StellaVerkijk
 This scripts
 -reads in sentences that were annotated with an ICF domain in the a-proof project (this data is not provided because of privacy issues)
 -matches batches of three sentences together according to certain criteria:
