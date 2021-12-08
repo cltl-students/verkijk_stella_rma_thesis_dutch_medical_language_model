@@ -9,7 +9,7 @@ Because of privacy contraints, the data for this task can not be provided.
 # Scripts
 _gather_persons.py_ creates a dataset of 8000 sentences for the fill-mask task. From this dataset, 100 relevant sentences were selected for the test set. 
 This was done twice, once with data used in the pre-training phase and once with unseen data.
-_anonymizing_test.py_ gathers predictions of the From Scratch Language Model (20 predictions per sentence) and writes them to a csv file where
+_anonymizing_test.py_ gathers predictions of the From Scratch Language Model (40 predictions per sentence) and writes them to a csv file where
 - the first row is a prediction made
 - the second row is how many times the prediction was made
   
