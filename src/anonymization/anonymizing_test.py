@@ -30,7 +30,7 @@ print("Making predictions...")
 i = 0
 for d in list_of_ds:
     i+=1
-    pre_dicts = fill_mask(d['sen'], top_k=20)
+    pre_dicts = fill_mask(d['sen'], top_k=40)
     tokens = []
     for pred in pre_dicts:
         tokens.append(pred['token_str'])
