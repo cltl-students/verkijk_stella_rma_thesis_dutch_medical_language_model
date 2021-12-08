@@ -1,7 +1,7 @@
 # Testing a language model's anonymity
 To test the level of anonymity of the From Scratch Medical Model, a test set was created.
 Because most names in the pre-training data were replaced with PERSON with spaCy, the model has a strong semantic representation for PERSON as an individual's name.
-To create a test set, sentences that contained the PERSON token were collected and replaced by <mask>. It was then tested how often the model would predict a name in the place of the masked token performing the fill-mask task.
+To create a test set, sentences that contained the PERSON token were collected and replaced by "<mask>". It was then tested how often the model would predict a name in the place of the masked token performing the fill-mask task.
   
 # Data
 Because of privacy contraints, the data for this task can not be provided.
