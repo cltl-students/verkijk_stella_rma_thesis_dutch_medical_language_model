@@ -4,7 +4,7 @@ Because most names in the pre-training data were replaced with PERSON with spaCy
 To create a test set, sentences that contained the PERSON token were collected and replaced by "[MASK]". It was then tested how often the model would predict a name in the place of the masked token performing the fill-mask task.
   
 # Data
-Because of privacy contraints, not all data used for this task can not be provided. Only the last test set that contains sentences that were not included in the pre-training of MedRoBERTa.nl can be found under 'data'.
+Because of privacy contraints, not all data used for this task can not be provided. Only the test set that contains sentences that were not included in the pre-training of MedRoBERTa.nl can be found under the name "anon_specific_testset_eval_public.csv". 
   
 # Scripts
 _gather_persons.py_ creates a dataset of 8000 sentences for the fill-mask task. From this dataset, 100 relevant sentences were selected for the test set. 
