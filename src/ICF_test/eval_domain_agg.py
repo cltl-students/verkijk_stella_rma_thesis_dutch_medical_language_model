@@ -1,5 +1,5 @@
 """
-@Author StellaVerkijk
+@author StellaVerkijk
 This scripts writes the performance of a model for ICF classification on note level to a file
 """
 
